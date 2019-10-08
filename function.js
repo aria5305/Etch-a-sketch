@@ -4,7 +4,7 @@ const container = document.querySelector(".container");
 const btnNorm = document.querySelector(".btn-norm"); 
 const btnPencil = document.querySelector(".btn-pencil");
 const btnColor = document.querySelector(".btn-color");
-
+const colorPicker = document.querySelector("#colorPicker");
 
 
 
@@ -79,8 +79,6 @@ function randomColor (){
 
 
 
-
-
 //prompt to ask user input & reseting
 function newGrid(){
     clear();
@@ -105,7 +103,8 @@ function colorNew(){
 
 //function to "draw"
 function drawGrid(){
-    this.classList.add("normalDraw");
+    this.style.background = colorPicker.value;
+
 }
 function pencilDraw(){
     this.classList.add("pencilDraw");
